@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+</head>
+
+<body>
+
+  <main class="hero">
+
+      <div class="cards">
+
+        <div class="card-front-container">
+
+          <img class="front-logo" src="images/card-logo.svg" alt="">
+
+          <p class="placeholder1">0000 0000 0000 0000</p> 
+
+          <div class="name-and-expire">
+
+            <p class="placeholder2">Jane Appleseed</p> 
+
+            <div class="placeholders">
+
+              <p class="placeholder3">00</p> 
+
+              <p>/</p>
+              
+              <p class="placeholder4">00</p> 
+
+            </div>
+
+          </div>
+          
+        </div>
+
+        <div class="card-back-container">
+
+          <p class="placeholder5">000</p> 
+
+        </div>
+
+      </div>
+
+    <form id="form">
+
+      <div class="container">
+
+        <p class="user">Cardholder Name</p>
+
+        <input type="text" minlength="1" maxlength="30" id="name" placeholder="e.g. Jane Appleseed">
+
+        <p class="error3 hidden">Card has no owner</p>
+
+      </div>
+
+      <div class="container">
+
+        <p class="user">Card Number</p>
+
+        <input type="text" minlength="1" maxlength="19" id="number" placeholder="e.g. 1234 5678 9123 0000">
+
+        <p class="error hidden">Wrong format, numbers only</p>
+
+      </div>
+
+      <div class="exp-date-and-cvc">
+
+        <div class="container">
+
+          <p class="user">Exp. Date (MM/YY)</p>
+
+          <div class="mm-yy-inputs">
+
+            <input class="mm" type="text" minlength="1" maxlength="2" id="mm" placeholder="MM">
+
+            <input class="yy" type="text" minlength="1" maxlength="2" id="yy" placeholder="YY">
+
+          </div>
+
+          <p class="error2 hidden">Wrong format</p>
+
+        </div>
+
+        <div class="container">
+
+          <p class="user">CVC</p>
+
+          <input type="text" minlength="1" maxlength="3" id="cvc" placeholder="e.g. 123">
+
+          <p class="error4 hidden">Wrong!</p>
+
+        </div>
+
+      </div>
+
+      <button class="confirm">Confirm</button> 
+
+    </form>
+
+    <div class="thank-you hidden">
+
+      <img src="images/icon-complete.svg" alt="">
+      
+      <h1>Thank you!</h1>
+
+      <p>We've added your card details</p>
+
+      <button class="continue">Continue</button>
+
+    </div>
+
+  </main>
+  
+  <script src="index.js"></script>
+
+</body>
+
+</html>
+
+    <!-- Challenge by Frontend Mentor. 
+    Coded by Krysian Czeszewski -->

@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+:root{
+    --red: hsl(0, 100%, 66%);
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+}
+
+/* - Linear gradient (active input border): hsl(249, 99%, 64%) to hsl(278, 94%, 30%) */
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-image: url('images/bg-main-desktop.png');
+    background-size: 40% 100%;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.card-front-container{
+    background-image: url('images/bg-card-front.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 447px;
+    height: 245px;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5em;
+    position: relative;
+    right: 50px;
+}
+
+.card-back-container{
+    background-image: url('images/bg-card-back.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 447px;
+    height: 245px;
+    padding: 1.5em;
+    position: relative;
+}
+
+.placeholder1{
+    margin: 0 auto;
+    font-size: 2.5em;
+}
+
+.placeholder2{
+    text-transform: uppercase;
+}
+
+.placeholder5{
+    position: absolute;
+    top: 122px;
+    left: 380px;
+}
+
+.name-and-expire{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.15em;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  font-size: 2em;
+}
+
+.exp-date-and-cvc{
+    display: flex;
+    gap: 0.5em;
+}
+
+.mm-yy-inputs{
+    display: flex;
+    gap: 0.5em;
+}
+
+.container{
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+}
+
+.mm{
+    width: 50px;
+}
+
+.yy{
+    width: 50px;
+}
+
+.user{
+    font-size: 0.8em;
+}
+
+input{
+    height: 2em;
+    padding: 0em 0.5em;
+}
+
+button{
+    height: 3em;
+    border: none;
+    background-color: var(--very-dark-violet);
+    color: var(--white);
+    border-radius: 0.5em;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.hero{
+    display: flex;
+    align-items: center;
+    gap: 5em;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+}
+
+.front-logo{
+    width: 90px;
+}
+
+.placeholders{
+    display: flex;
+}
+
+.thank-you{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.error{
+    font-size: 0.5em;
+    color: var(--red);
+}
+
+.error2{
+    font-size: 0.5em;
+    color: var(--red);
+}
+
+.error3{
+    font-size: 0.5em;
+    color: var(--red);
+}
+
+.error4{
+    font-size: 0.5em;
+    color: var(--red);
+}
+
+.pass{
+    border: 1px solid rgb(17, 206, 17);
+}
+
+.decline{
+    border: 1px solid var(--red);
+}
+
+.hidden{
+    display: none;
+}
+
+@media(max-width: 1200px){
+
+    .hero{
+        flex-direction: column;
+    }
+
+    .cards{
+        position: relative;
+    }
+
+    .card-front-container{
+        position: absolute;
+        z-index: 2;
+        top: 100px;
+    }
+
+    .card-back-container{
+        z-index: 1;
+        bottom: 50px;
+        left: 20px;
+    }
+
+    body{
+        background-position: top;
+        background-size: 100% 45%;
+    }
+
+    form{
+        gap: 0em
+    }
+
+}
+
+
+@media(max-width: 600px){
+
+    .card-front-container{
+        background-size: 345px;
+        padding: 0.8em;
+        width: 319px;
+        height: 163px;
+        gap: 1.7em;
+        left: 0px;
+    }
+
+    body{
+        background-size: 1100% 52%;
+    }
+
+    .card-back-container{
+        background-size: 345px;
+        width: 319px;
+        height: 163px;
+        left: 10px;
+    }
+
+    .placeholder1{
+        font-size: 1.5em;
+    }
+
+    .placeholder2{
+        text-transform: uppercase;
+        font-size: 0.7em;
+    }
+
+    .placeholders{
+        font-size: 0.8em;
+    }
+
+    .placeholder5{
+        position: absolute;
+        top: 83px;
+        left: 270px;
+    }
+
+    form{
+        font-size: 1.2em;
+    }
+
+    .hero{
+        gap: 8em;
+    }
+}
+
